@@ -133,4 +133,36 @@ html, body {
     font-size: 0.9rem;
     color: #555;
   }
+
+  .photo-gallery {
+    display: flex;
+    justify-content: space-between; /* or center / start / end */
+    gap: 50px; /* spacing between images */
+    flex-wrap: nowrap; /* ensures images stay in one row */
+    overflow-x: auto;  /* optional: scroll if screen is too small */
+  }
+  
+  .photo-gallery img {
+    width: 100%;
+    max-width: 200px; /* adjust based on your design */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .photo-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  .photo-gallery img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
   
