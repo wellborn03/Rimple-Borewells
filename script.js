@@ -1,0 +1,10 @@
+const m=document.querySelector('.menu'),u=document.querySelector('nav ul');
+m&&m.addEventListener('click',()=>{const o=u.classList.toggle('open');m.setAttribute('aria-expanded',o)});
+const lb=document.getElementById('lb');
+document.querySelectorAll('.gallery button').forEach(b=>b.addEventListener('click',()=>{lb.querySelector('img').src=b.querySelector('img').src;lb.classList.add('on')}));
+lb&&lb.addEventListener('click',()=>lb.classList.remove('on'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&lb)lb.classList.remove('on')});
+const f=document.getElementById('enquiry');
+f&&f.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(f);
+const t=`Hello Rimple Borewells, I need: ${d.get('item')}.%0AName: ${d.get('name')}%0ALocation: ${d.get('place')}%0A${d.get('msg')||''}`;
+window.open('https://wa.me/919823830276?text='+t.replace(/ /g,'%20'),'_blank')});

@@ -1,0 +1,41 @@
+:root{--ink:#1d2327;--concrete:#e4e6e3;--paper:#f6f6f3;--water:#0a5c80;--deep:#083a52;--sun:#f2b705;--muted:#5b656b;--r:10px}
+@media(prefers-color-scheme:dark){:root{--paper:#14191c;--concrete:#1f272b;--ink:#eceeed;--muted:#a3adb2}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.6 "Source Sans 3",system-ui,sans-serif;background:var(--paper);color:var(--ink);padding-bottom:64px}
+h1,h2,h3{font-family:"Archivo",system-ui,sans-serif;line-height:1.1;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.4rem,7vw,4.6rem);font-weight:800}h2{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:800}h3{font-size:1.2rem}
+a{color:var(--water)}img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.wrap{max-width:1100px;margin:auto;padding:0 1.25rem}
+section{padding:4rem 0}
+nav{position:sticky;top:0;z-index:20;background:var(--deep);color:#fff}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:800 1.15rem Archivo,sans-serif;color:#fff;text-decoration:none}
+.logo span{color:var(--sun)}
+nav ul{display:flex;gap:1.5rem;list-style:none;margin:0;padding:0}
+nav ul a{color:#fff;text-decoration:none;font-weight:600;padding:.3rem 0;border-bottom:2px solid transparent}
+nav ul a:hover,nav ul a[aria-current]{border-color:var(--sun)}
+.menu{display:none;background:none;border:1px solid #fff6;color:#fff;padding:.4rem .8rem}
+.btn{display:inline-block;background:var(--sun);color:#1d2327;font-weight:700;padding:.8rem 1.4rem;border-radius:var(--r);text-decoration:none;border:0;font-size:1rem;cursor:pointer}
+.btn:hover{filter:brightness(.93)}.btn.alt{background:transparent;color:inherit;border:2px solid currentColor}
+.hero{position:relative;color:#fff;background:var(--deep);padding:0;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%;opacity:.45}
+.hero .wrap{position:relative;padding:6rem 1.25rem 5rem}
+.hero p{max-width:34rem;font-size:1.2rem}.hero .row{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem}
+.facts{background:var(--sun);color:#1d2327}.facts .wrap{display:flex;flex-wrap:wrap;gap:.5rem 2.5rem;padding:1rem 1.25rem;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem}
+.card{background:var(--concrete);border-radius:var(--r);overflow:hidden}
+.card img{aspect-ratio:4/3;object-fit:cover;width:100%}.card div{padding:1.1rem 1.25rem 1.4rem}.card p{margin:0;color:var(--muted)}
+.gallery{columns:3 240px;gap:1rem}.gallery button{display:block;width:100%;margin:0 0 1rem;padding:0;border:0;background:none;cursor:zoom-in}
+.gallery img{width:100%;border-radius:var(--r)}
+.band{background:var(--deep);color:#fff}.band .btn.alt{color:#fff}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+.map{width:100%;height:360px;border:0;border-radius:var(--r)}
+.phones a{display:block;font:800 1.5rem Archivo,sans-serif;text-decoration:none;padding:.2rem 0}
+form{display:grid;gap:.8rem}input,textarea,select{font:inherit;padding:.7rem;border-radius:8px;border:1px solid #8a949a;background:var(--paper);color:var(--ink);width:100%}
+footer{background:#10181c;color:#b9c2c6;padding:2.5rem 0;font-size:.95rem}footer a{color:#fff}
+.bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:30;background:var(--deep);padding:.5rem;gap:.5rem}
+.bar a{flex:1;text-align:center;padding:.75rem;border-radius:8px;font-weight:700;text-decoration:none;background:var(--sun);color:#1d2327}.bar a+a{background:#25d366}
+#lb{position:fixed;inset:0;background:#000d;display:none;place-items:center;z-index:50;padding:1rem}#lb.on{display:grid}#lb img{max-height:92vh;border-radius:8px}
+@media(max-width:760px){.menu{display:block}nav ul{display:none;position:absolute;top:60px;left:0;right:0;background:var(--deep);flex-direction:column;padding:1rem 1.25rem;gap:.8rem}nav ul.open{display:flex}.two{grid-template-columns:1fr}.bar{display:flex}section{padding:3rem 0}.hero .wrap{padding:4rem 1.25rem 3.5rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
